@@ -75,6 +75,8 @@ export async function login(username: string, password: string): Promise<ApiResp
 export async function logout(): Promise<void> {
   localStorage.removeItem('token');
   localStorage.removeItem('user');
+
+  window.location.href = '/';
 }
 
 export async function getFriends(): Promise<Friend[]> {
